@@ -1,0 +1,1 @@
+num_doc = 50	n_words = 100	

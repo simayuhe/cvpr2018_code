@@ -1,0 +1,22 @@
+%¥ ∆µø… ”ªØ
+%filename = 'classqq100.txt';% '../..\result\classqq2.txt';
+%filename =  './data/topic/topics.txt';
+no_exper=1;
+iter=20;
+filepath= ['../result/exper' num2str(no_exper) '/classqq' num2str(iter)];
+filename = [filepath '.txt'];
+
+%filename =  './data/docset1/doc_1.txt';
+dict_size = 25;
+class_all=load(filename);
+for i=1:1:size(class_all,1)
+    h=figure(i);
+    imlayout(class_all(i,:),[sqrt(dict_size) sqrt(dict_size) 1 1],[min(class_all(i,:)) max(class_all(i,:))],'y');
+    set(h,'visible','off');
+    %str=sprintf('./data/topic/topic(%d)',i);
+str=sprintf([filepath '(%d)'],i);
+saveas(h,str,'jpg');
+end
+% freq=countwordfrequency(filename,dict_size);
+% %imlayout(topics, [5 5 1 numclass],[min(topics(:)) max(topics(:))],'y');
+% imlayout(freq,[sqrt(dict_size) sqrt(dict_size) 1 1],[min(freq(:)) max(freq(:))],'y');

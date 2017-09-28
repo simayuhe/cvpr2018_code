@@ -24,4 +24,11 @@
 	result/exper1/classqq1~n.txt 聚类得到主题
 	result/exper1/likelihood.txt 每次迭代的log likelihood
 可视化：result/exper1/classqq1~n.jpg 可视化
-留用：storage/ 复制较好的实验结果 包括其数据集docset 实验结果exper 防止实验过程中产生覆盖
+留用：(建在外层，手动操作)storage/ 复制较好的实验结果 包括其数据集docset 实验结果exper 防止实验过程中产生覆盖
+
+20170828
+没有标记单词的topic
+如果没有先验，在主程序中应该如何表示？
+对link的采样会很慢
+多层拓展
+
