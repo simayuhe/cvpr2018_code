@@ -233,7 +233,8 @@ template<typename D> void Layer<D>::initialize_base()
 	for (vector<SS>::iterator it_w = trainss.begin(); it_w != trainss.end(); it_w++)
 	{
 		//	base.add_data(base.get_classqq().front(), trainss.at(i));
-		base.add_data(base.get_classqq().front(), *it_w);//定义在Multinomial.cpp 或者 Tri_Mult.cpp中，取决于base的类型作用是在长度为1000词典qq中对应的位置统计每个单词出现的次数
+		base.add_data(base.get_classqq().front(), *it_w);//定义在Multinomial.cpp 或者 Tri_Mult.cpp中，取决于base的类型
+		//作用是在长度为1000词典qq中对应的位置统计每个单词出现的次数
 	}
 	is_computed.assign(tot_num_words, false);
 	log_pred_liks.assign(tot_num_words, 0.0);
@@ -835,7 +836,7 @@ template<typename D> void Layer<D>::sample_customer()
 	for (vector<double>::iterator it_p = log_probs_sampling.begin(); it_p != log_probs_sampling.end(); it_p++)
 	{
 		//double * it_p = &log_probs_sampling.at(i);
-		*it_p = exp(*it_p - max_log_prob);
+		*it_p = exp(*it_p - max_log_prob);//注意到减和除的关系，这里可能是在做归一化
 		sum += *it_p;
 	}
 	log_probs_sampling.push_back(sum);
@@ -1151,7 +1152,8 @@ template<typename D> void Layer<D>::sample_and_traverse(int _cur_point)
 #endif
 	 
 
-	is_self_linked = (customers.at(_cur_point) == _cur_point) ? true : false;
+	is_self_linked = (customers.at(_cur_point) == _cur_point) ? true : false;//该节点在本层中是否为根节点
+
 
 	if (is_self_linked)
 	{
@@ -1167,7 +1169,7 @@ template<typename D> void Layer<D>::sample_and_traverse(int _cur_point)
 			//sample_link_points(_cur_point);
 		}
 	}
-	sample_link_points(_cur_point);
+	sample_link_points(_cur_point);//无论是否为根节点，都要对指向它的link point 进行采样
 	//把traverse放在外面
 
 

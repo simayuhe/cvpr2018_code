@@ -2,7 +2,7 @@
 %filename = 'classqq100.txt';% '../..\result\classqq2.txt';
 %filename =  './data/topic/topics.txt';
 no_exper=1;
-iter=20;
+iter=100;
 filepath= ['../result/exper' num2str(no_exper) '/classqq' num2str(iter)];
 filename = [filepath '.txt'];
 

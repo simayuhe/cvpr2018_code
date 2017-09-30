@@ -23,6 +23,6 @@
 //#ifndef MY_DEBUG
 //#define MY_DEBUG
 //#endif
-#ifndef PRINT_FUNC_NAME
-#define PRINT_FUNC_NAME
-#endif
+//#ifndef PRINT_FUNC_NAME
+//#define PRINT_FUNC_NAME
+//#endif

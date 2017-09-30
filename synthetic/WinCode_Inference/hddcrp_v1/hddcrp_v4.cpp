@@ -26,13 +26,13 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//各层中餐馆模型的离散度参数
 	//注 ：1e-1 = 0.1
-	double alpha0 = 1e-2;
-	double alpha1 = 1e-3;
-	double alpha2 = 1e-10;
+	double alpha0 = 5;
+	double alpha1 = 2;
+	double alpha2 = 1;
 	//double alpha3 = 1;
 
 	//从num_burn_in开始对起止点标记进行Gibbs采样，总的采样次数是num_samples，间隔num_space 保存中间结果 
-	int num_burn_in = 1, num_samples = 20, num_space = 1;
+	int num_burn_in = 1, num_samples = 100, num_space = 1;
 
 	//输入输出路径D:\code\mycode\HDDCRP_V3\synthetic\inputdata
 	//string T = { "D:/code/mycode/HDDCRP_V3/synthetic/inputdata/synthetic_dat_76.mat" };
@@ -58,7 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//HH hh(size_voc_word, eta_i_word, size_voc_source, eta_i_source, size_voc_sink, eta_i_sink);//初始化超参数
 	HddCRP_Model<DIST> model(hh, alphas, num_burn_in, num_samples, num_space, save_dir);
 	model.load_matlab_trainss(trainss_file_name);
-	cout << "here";
+
 	model.load_matlab_link(link_file_name);
 	model.initialize();
 	Layer<DIST>::base.init_log_pos_vals(Layer<DIST>::trainss.size());

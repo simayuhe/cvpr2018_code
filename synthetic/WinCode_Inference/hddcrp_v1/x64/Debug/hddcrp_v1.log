@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/9/28 20:37:14。
+﻿生成启动时间为 2017/9/30 9:15:05。
      1>项目“D:\code\cvpr2018_code\synthetic\WinCode_Inference\hddcrp_v1\hddcrp_v1.vcxproj”在节点 2 上(Build 个目标)。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(355,5): warning MSB8003: Could not find WindowsSDKDir variable from the registry.  TargetFrameworkVersion or PlatformToolset may be set to an invalid version number.
      1>ClCompile:
@@ -22,8 +22,8 @@
                  ]
                  d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\HddCRP.hpp(70): 编译类 模板 成员函数“void HddCRP_Model<DIST>::load_matlab_trainss(std::string &)”时
                  hddcrp_v4.cpp(60): 参见对正在编译的函数 模板 实例化“void HddCRP_Model<DIST>::load_matlab_trainss(std::string &)”的引用
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(373): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(357): 编译类 模板 成员函数“void Layer<D>::load_matlab_trainss(std::string &)”时
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(374): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(358): 编译类 模板 成员函数“void Layer<D>::load_matlab_trainss(std::string &)”时
                  with
                  [
                      D=DIST
@@ -33,10 +33,10 @@
                  [
                      D=DIST
                  ]
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(380): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(389): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(455): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(407): 编译类 模板 成员函数“void Layer<D>::load_matlab_link(std::string &,double)”时
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(381): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(390): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(456): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(408): 编译类 模板 成员函数“void Layer<D>::load_matlab_link(std::string &,double)”时
                  with
                  [
                      D=DIST
@@ -46,8 +46,8 @@
                  [
                      D=DIST
                  ]
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(483): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(481): 编译类 模板 成员函数“void Layer<D>::initialize_link(int,int)”时
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(484): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(482): 编译类 模板 成员函数“void Layer<D>::initialize_link(int,int)”时
                  with
                  [
                      D=DIST
@@ -57,8 +57,8 @@
                  [
                      D=DIST
                  ]
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1503): warning C4101: “timer_a”: 未引用的局部变量
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1502): 编译类 模板 成员函数“void Layer<D>::run_sampler(void)”时
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1505): warning C4101: “timer_a”: 未引用的局部变量
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1504): 编译类 模板 成员函数“void Layer<D>::run_sampler(void)”时
                  with
                  [
                      D=DIST
@@ -68,76 +68,76 @@
                  [
                      D=DIST
                  ]
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(780): warning C4101: “log_prob_i”: 未引用的局部变量
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(753): 编译类 模板 成员函数“double Layer<D>::compute_log_self_link_lik(void)”时
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(781): warning C4101: “log_prob_i”: 未引用的局部变量
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(754): 编译类 模板 成员函数“double Layer<D>::compute_log_self_link_lik(void)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1325): 参见对正在编译的函数 模板 实例化“double Layer<D>::compute_log_self_link_lik(void)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1327): 参见对正在编译的函数 模板 实例化“double Layer<D>::compute_log_self_link_lik(void)”的引用
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1311): 编译类 模板 成员函数“void Layer<D>::sample_for_leaf(int)”时
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1313): 编译类 模板 成员函数“void Layer<D>::sample_for_leaf(int)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1376): 参见对正在编译的函数 模板 实例化“void Layer<D>::sample_for_leaf(int)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1378): 参见对正在编译的函数 模板 实例化“void Layer<D>::sample_for_leaf(int)”的引用
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(549): 编译类 模板 成员函数“void Layer<D>::collect_customers(void)”时
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(550): 编译类 模板 成员函数“void Layer<D>::collect_customers(void)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(492): 参见对正在编译的函数 模板 实例化“void Layer<D>::collect_customers(void)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(493): 参见对正在编译的函数 模板 实例化“void Layer<D>::collect_customers(void)”的引用
                  with
                  [
                      D=DIST
                  ]
                  d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\HddCRP.hpp(222): 编译类 模板 成员函数“void HddCRP_Model<DIST>::save_classqq(int)”时
                  d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\HddCRP.hpp(199): 参见对正在编译的函数 模板 实例化“void HddCRP_Model<DIST>::save_classqq(int)”的引用
-     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1699): warning C4101: “log_prob_i”: 未引用的局部变量
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1676): 编译类 模板 成员函数“double Layer<D>::compute_log_self_link_lik_sfl(void)”时
+     1>d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1701): warning C4101: “log_prob_i”: 未引用的局部变量
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1678): 编译类 模板 成员函数“double Layer<D>::compute_log_self_link_lik_sfl(void)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1867): 参见对正在编译的函数 模板 实例化“double Layer<D>::compute_log_self_link_lik_sfl(void)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1869): 参见对正在编译的函数 模板 实例化“double Layer<D>::compute_log_self_link_lik_sfl(void)”的引用
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1829): 编译类 模板 成员函数“void Layer<D>::sample_for_single_sfl(void)”时
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1831): 编译类 模板 成员函数“void Layer<D>::sample_for_single_sfl(void)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1144): 参见对正在编译的函数 模板 实例化“void Layer<D>::sample_for_single_sfl(void)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1145): 参见对正在编译的函数 模板 实例化“void Layer<D>::sample_for_single_sfl(void)”的引用
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(580): 编译类 模板 成员函数“void Layer<D>::get_candidates(void)”时
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(581): 编译类 模板 成员函数“void Layer<D>::get_candidates(void)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(757): 参见对正在编译的函数 模板 实例化“void Layer<D>::get_candidates(void)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(758): 参见对正在编译的函数 模板 实例化“void Layer<D>::get_candidates(void)”的引用
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(643): 编译类 模板 成员函数“int Layer<D>::get_cluster(int)”时
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(644): 编译类 模板 成员函数“int Layer<D>::get_cluster(int)”时
                  with
                  [
                      D=DIST
                  ]
-                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1319): 参见对正在编译的函数 模板 实例化“int Layer<D>::get_cluster(int)”的引用
+                 d:\code\cvpr2018_code\synthetic\wincode_inference\hddcrp_v1\Layer.hpp(1321): 参见对正在编译的函数 模板 实例化“int Layer<D>::get_cluster(int)”的引用
                  with
                  [
                      D=DIST
@@ -154,4 +154,4 @@
 
 生成成功。
 
-已用时间 00:00:01.20
+已用时间 00:00:01.13
