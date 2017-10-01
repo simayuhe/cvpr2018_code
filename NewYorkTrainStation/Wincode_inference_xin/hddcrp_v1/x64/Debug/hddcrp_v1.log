@@ -1,0 +1,186 @@
+﻿生成启动时间为 2017/10/1 15:55:39。
+     1>项目“D:\code\cvpr2018_code\NewYorkTrainStation\Wincode_inference_xin\hddcrp_v1\hddcrp_v1.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(355,5): warning MSB8003: Could not find WindowsSDKDir variable from the registry.  TargetFrameworkVersion or PlatformToolset may be set to an invalid version number.
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt hddcrp_v1.6.cpp "mt19937ar-cok.cpp" Multinomial.cpp rand_utils.cpp stdafx.cpp Tri_Mult.cpp
+         Tri_Mult.cpp
+         stdafx.cpp
+         rand_utils.cpp
+     1>rand_utils.cpp(22): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+     1>rand_utils.cpp(39): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+     1>rand_utils.cpp(56): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+         Multinomial.cpp
+     1>Multinomial.cpp(16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>Multinomial.cpp(30): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>Multinomial.cpp(47): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>Multinomial.cpp(61): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         mt19937ar-cok.cpp
+         hddcrp_v1.6.cpp
+     1>hddcrp_v1.6.cpp(60): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(108): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(106): 编译类 模板 成员函数“void HddCRP_Model<DIST>::initialize(void)”时
+                 hddcrp_v1.6.cpp(59): 参见对正在编译的函数 模板 实例化“void HddCRP_Model<DIST>::initialize(void)”的引用
+                 hddcrp_v1.6.cpp(56): 参见对正在编译的类 模板 实例化“HddCRP_Model<DIST>”的引用
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(231): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(229): 编译类 模板 成员函数“void Layer<D>::initialize_base(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(143): 参见对正在编译的函数 模板 实例化“void Layer<D>::initialize_base(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(63): 编译类 模板 成员函数“void HddCRP_Model<DIST>::load_matlab_trainss(std::string &)”时
+                 hddcrp_v1.6.cpp(57): 参见对正在编译的函数 模板 实例化“void HddCRP_Model<DIST>::load_matlab_trainss(std::string &)”的引用
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(278): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(263): 编译类 模板 成员函数“void Layer<D>::load_matlab_trainss(std::string &)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(64): 参见对正在编译的函数 模板 实例化“void Layer<D>::load_matlab_trainss(std::string &)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(279): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(283): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(290): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(299): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(456): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(408): 编译类 模板 成员函数“void Layer<D>::load_matlab_link(std::string &,double)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(97): 参见对正在编译的函数 模板 实例化“void Layer<D>::load_matlab_link(std::string &,double)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(483): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(481): 编译类 模板 成员函数“void Layer<D>::initialize_link(int,int)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(122): 参见对正在编译的函数 模板 实例化“void Layer<D>::initialize_link(int,int)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1475): warning C4101: “timer_a”: 未引用的局部变量
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1474): 编译类 模板 成员函数“void Layer<D>::run_sampler(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(168): 参见对正在编译的函数 模板 实例化“void Layer<D>::run_sampler(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(2135): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(2123): 编译类 模板 成员函数“void Layer<D>::label_instances(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(191): 参见对正在编译的函数 模板 实例化“void Layer<D>::label_instances(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(2153): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(2145) : 忽略“i”的定义
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(2124) : 使用“i”的定义
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(777): warning C4101: “log_prob_i”: 未引用的局部变量
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(750): 编译类 模板 成员函数“double Layer<D>::compute_log_self_link_lik(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1298): 参见对正在编译的函数 模板 实例化“double Layer<D>::compute_log_self_link_lik(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1287): 编译类 模板 成员函数“void Layer<D>::sample_for_leaf(int)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1348): 参见对正在编译的函数 模板 实例化“void Layer<D>::sample_for_leaf(int)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(549): 编译类 模板 成员函数“void Layer<D>::collect_customers(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(492): 参见对正在编译的函数 模板 实例化“void Layer<D>::collect_customers(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(211): 编译类 模板 成员函数“void HddCRP_Model<DIST>::save_classqq(int)”时
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\HddCRP.hpp(190): 参见对正在编译的函数 模板 实例化“void HddCRP_Model<DIST>::save_classqq(int)”的引用
+     1>d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1671): warning C4101: “log_prob_i”: 未引用的局部变量
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1648): 编译类 模板 成员函数“double Layer<D>::compute_log_self_link_lik_sfl(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1839): 参见对正在编译的函数 模板 实例化“double Layer<D>::compute_log_self_link_lik_sfl(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1801): 编译类 模板 成员函数“void Layer<D>::sample_for_single_sfl(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1123): 参见对正在编译的函数 模板 实例化“void Layer<D>::sample_for_single_sfl(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(580): 编译类 模板 成员函数“void Layer<D>::get_candidates(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(754): 参见对正在编译的函数 模板 实例化“void Layer<D>::get_candidates(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(654): 编译类 模板 成员函数“void Layer<D>::collect_clusters(void)”时
+                 with
+                 [
+                     D=DIST
+                 ]
+                 d:\code\cvpr2018_code\newyorktrainstation\wincode_inference_xin\hddcrp_v1\Layer.hpp(1290): 参见对正在编译的函数 模板 实例化“void Layer<D>::collect_clusters(void)”的引用
+                 with
+                 [
+                     D=DIST
+                 ]
+         正在生成代码...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\code\cvpr2018_code\NewYorkTrainStation\Wincode_inference_xin\x64\Debug\hddcrp_v1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files\MATLAB\R2014a\extern\lib\win32\microsoft" /LIBPATH:"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft" libmat.lib libmx.lib libmex.lib libeng.lib kernel32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\code\cvpr2018_code\NewYorkTrainStation\Wincode_inference_xin\x64\Debug\hddcrp_v1.pdb" /SUBSYSTEM:CONSOLE,"5.02" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\code\cvpr2018_code\NewYorkTrainStation\Wincode_inference_xin\x64\Debug\hddcrp_v1.lib" /MACHINE:X64 x64\Debug\hddcrp_v1.6.obj
+         "x64\Debug\mt19937ar-cok.obj"
+         x64\Debug\Multinomial.obj
+         x64\Debug\rand_utils.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\Tri_Mult.obj
+         hddcrp_v1.vcxproj -> D:\code\cvpr2018_code\NewYorkTrainStation\Wincode_inference_xin\x64\Debug\hddcrp_v1.exe
+     1>已完成生成项目“D:\code\cvpr2018_code\NewYorkTrainStation\Wincode_inference_xin\hddcrp_v1\hddcrp_v1.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.64
