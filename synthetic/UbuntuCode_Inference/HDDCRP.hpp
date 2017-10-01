@@ -1,5 +1,5 @@
-#pragma once
-#include "StdAfx.h"
+//#pragma once
+//#include "StdAfx.h"
 #include "Layer.hpp"
 #include <time.h>
 #include <string>
@@ -122,11 +122,6 @@ template<class D> void HddCRP_Model<D>::load_matlab_link(string& link_file)
 template<class D> void HddCRP_Model<D>::load_txt_link(string& link_file)//20170821
 {
 	layers.at(0).load_txt_link(link_file, alphas.at(1));
-	for (int i = 1; i < alphas.size() - 1; i++)
-	{
-		string empty_file;
-		layers.at(i).load_txt_link(empty_file, alphas.at(i + 1));
-	}
 
 }
 
@@ -167,6 +162,7 @@ template<class D> void HddCRP_Model<D>::initialize()
 	layers.back().log_alpha_group = 0.0;
 	cout << "intialize at the layer(back) : " << endl;
 	layers.back().initialize_link(1, 1);
+//cout<<"LINK OVER";
 	//layers.back().initialize_link(100, 1);
 	Layer<D>::initialize_base();
 	Layer<D>::bottom = &layers.at(0);
