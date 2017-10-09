@@ -1557,6 +1557,7 @@ cout<<"done the traverse link part "<<inds_groups.at(idx_table)<<endl;
 }*/
 template<typename D> void Layer<D>::traverse_single_table(int idx_table)
 {//输入是餐桌的标号，对餐桌的树及其子树进行梳理存储在tree.at(idx_table)，并统计其观测值存在相应的stats中，
+cout<<"the current idx table is "<<idx_table;
 	vector<int>& tree_i = trees.at(idx_table);//
 	vector<int>& order_i = orders.at(idx_table);
 	vector<STAT>& stat_i = stats.at(idx_table);
@@ -1590,10 +1591,12 @@ template<typename D> void Layer<D>::traverse_single_table(int idx_table)
 		to_visit.push_back(*p);//指向下一个值
 		to_visit_father.push_back(-1);//父节点已经保存过了，这里都标记成-1
 	}
+cout<<"done the traverse link part "<<inds_groups.at(idx_table)<<endl;
 	int curr;
 	while (!to_visit.empty())//如果经过上面的折腾之后to_visit不是空的，则？？
 	{
 		curr = to_visit.back();//从最后一个开始
+cout<<"curr is "<<curr<<endl;
 		inds_start.at(curr) = cnt++;//这个cnt是跟着上面的来的
 		tree_i.push_back(curr);
 		stat_i.push_back(STAT());
@@ -1603,6 +1606,7 @@ template<typename D> void Layer<D>::traverse_single_table(int idx_table)
 		vector<int> & links_curr = links.at(curr);
 		if (!links_curr.empty())
 		{//如果在curr点的link不是空的
+cout<<"links_curr is not empty"<<endl;
 			p = links_curr.begin();
 			to_visit.push_back(*p);
 			to_visit_father.push_back(curr);
@@ -1614,14 +1618,18 @@ template<typename D> void Layer<D>::traverse_single_table(int idx_table)
 		}
 		else
 		{//如果该点的links是空的
-
+cout<<"links_curr is empty"<<endl;
 			inds_end.at(curr) = inds_start.at(curr);
+cout<<"inds_end.at(curr) "<<inds_end.at(curr) <<endl;
+cout<<"trainss.at(curr).word source sink are :"<< trainss.at(curr).word<<"|"<<trainss.at(curr).source<<"|"<<trainss.at(curr).sink<<endl;
 			child ?
 				(stat_i.at(inds_start.at(curr)).init(child->stats.at(curr).front(), base.get_eta())) :
 				stat_i.at(inds_start.at(curr)).init(trainss.at(curr), base.get_eta());
+cout<<"here"<<endl;
 			order_i.push_back(inds_start.at(curr));//表明了这个
 
 			int f = father_i.at(inds_start.at(curr));
+cout<<"f is "<< f<<endl;
 			while (f >= 0)//有大于0表示其子节点已经算完了
 			{
 				inds_end.at(f) = inds_end.at(curr);//那么该节点所包含的子节点就应该到这个位置结束了
@@ -1683,15 +1691,15 @@ template<typename D> void Layer<D>::traverse_links()
 	inds_start.assign(trainss.size(), -1);
 	inds_end.assign(trainss.size(), -1);
 
-	__gnu_parallel::for_each(uni_tables_vec.begin(), uni_tables_vec.end(), bind1st(mem_fun(&Layer<D>::traverse_single_table), this));
-/*		for (int i = 0; i < uni_tables_vec.size(); i++)
+//	__gnu_parallel::for_each(uni_tables_vec.begin(), uni_tables_vec.end(), bind1st(mem_fun(&Layer<D>::traverse_single_table), this));
+		for (int i = 0; i < uni_tables_vec.size(); i++)
 		{
-//cout<<"traverse uni_tables_vec.at("<<i<<")";
+cout<<"traverse uni_tables_vec.at("<<i<<")";
 			this->traverse_single_table(uni_tables_vec.at(i));
-//cout<<" is done"<<endl;
+cout<<" is done"<<endl;
 		}
-*/
-//cout<<"we done this travers once. "<<endl;
+
+cout<<"we done this travers once. "<<endl;
 }
 
 #ifdef TRI_MULT_DIST

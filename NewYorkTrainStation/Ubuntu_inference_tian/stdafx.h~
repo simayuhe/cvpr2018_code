@@ -20,9 +20,9 @@ using namespace std;
 #ifndef LOAD_FROM_TXT
 #define LOAD_FROM_TXT
 #endif
-//#ifndef PRINT_FUNC_NAME
-//#define PRINT_FUNC_NAME
-//#endif
+#ifndef PRINT_FUNC_NAME
+#define PRINT_FUNC_NAME
+#endif
 #ifndef TRI_MULT_DIST
 #define TRI_MULT_DIST
 #endif

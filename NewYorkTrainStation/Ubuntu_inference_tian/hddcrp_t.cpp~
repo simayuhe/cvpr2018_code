@@ -320,7 +320,6 @@ cout<<"initss_file load well"<<endl;
 	
 	model.initialize();
 	Layer<DIST>::base.init_log_pos_vals(Layer<DIST>::trainss.size());
-cout<<"initialization done"<<endl;
 	model.run_sampler();
 
 	return 0;

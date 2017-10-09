@@ -14,7 +14,7 @@ genFileName()
 	echo $fileName
 }
 
-command11="./HddCRPtxt -data ../data/halfdata/ -link ../data/halfdata -K 500 -alpha0 1 -alpha1 1e-2 -alpha2 1e-4 -num_burn_in 1 -num_samples 100 -num_space 1 -save_dir ../result/exper3/ -init_ss ../data/halfdata"
+command11="./HddCRPtxt -data ../data/halfdata/ -K 500 -alpha0 1 -alpha1 1e-2 -alpha2 1e-4 -num_burn_in 1 -num_samples 100 -num_space 1 -save_dir ../result/exper3/"
 
 #command2="./HddCRP ../dataset/train_station/small/trainss_100_500.mat \
 #../dataset/train_station/small/prior.mat \

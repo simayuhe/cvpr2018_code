@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Tri_Mult.h"
 #include <math.h>
 
