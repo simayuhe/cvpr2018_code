@@ -1,13 +1,13 @@
 close all;clear all;clc 
-datapath='D:\code\cvpr2018_code\NewYorkTrainStation\data\halfdata\';
-dataname='Tian_1454_500.mat';
+datapath='D:\code\cvpr2018_code\NewYorkTrainStation\data\completedata\';
+dataname='forinit.mat';
 load([datapath dataname]);
 
 for i=1:1:length(trainss)
     doc_name = [datapath 'doc_' num2str(i) '.txt'];
     fid=fopen(doc_name,'wt');  
-    for j=1:1:size(trainss{i},2)
-        word=trainss{i}(1,j);
+    for j=1:1:size(trainss{i},1)
+        word=trainss{i}(j,1);
          fprintf(fid,'%g\t',word);
          clear word;
     end
