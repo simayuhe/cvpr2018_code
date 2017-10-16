@@ -1,19 +1,22 @@
-%µÃµ½¾ÛÀà½á¹ûclassqqi.txt Ö®ºó¶Ô½á¹û½øÐÐ¿ÉÊÓ»¯
-%»ù±¾Ë¼Â·£º
-%1.classqqi ÖÐµÄÃ¿Ò»ÐÐ¶¼ÊÇ×ÖµäÉÏµÄÒ»¸ö·Ö²¼£¬ÎÒÃÇÒª°ÑÕâ¸ö·Ö²¼»­³öÀ´£»£¨Ö±½Ó´ò³öÀ´¿´¿´½á¹ûÊÇ·ñÓÐÐ§£©
-%2.ÓÉÓÚÎÒÃÇÓÃµÄ×ÖµäÊÇÆ¬¶Î¹ì¼£µÄ¾ÛÀà£¬¶øÎÒÃÇ×îÖÕÏ£ÍûµÃµ½µÄÊÇÒ»¸öÇøÓòÐÅÏ¢£¬
-%  ËùÒÔ½«Æ¬¶Î¹ì¼£µÄÀàÍ¶Ó°µ½ÏàÓ¦µÄ·½¸ñÇøÓòÖÐ½øÐÐÏÔÊ¾¡£
+%ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½classqqi.txt Ö®ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½Ó»ï¿½
+%ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+%1.classqqi ï¿½Ðµï¿½Ã¿Ò»ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ïµï¿½Ò»ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+%2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Öµï¿½ï¿½ï¿½Æ¬ï¿½Î¹ì¼£ï¿½Ä¾ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
+%  ï¿½ï¿½ï¿½Ô½ï¿½Æ¬ï¿½Î¹ì¼£ï¿½ï¿½ï¿½ï¿½Í¶Ó°ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
 close all;clear all;clc
-n_th='2401';%************
-iter=66;
-dict_size=1000;
+n_th='101';%************
+iter=900;
+dict_size=300;
 
-backgroundIM=imread('D:\code\TEMP\GVEII\data\data2400frames\background.jpeg');
+backgroundIM=imread('../data/data5000frames/background.jpg');
+load('../3FeatureExpression/testsavepath_5000/inds_sub_tjcs.mat');
+load('../3FeatureExpression/testsavepath_5000/tjc_encoded.mat');
+load('../3FeatureExpression/testsavepath_5000/tjc_res.mat');
 [H,W,~]=size(backgroundIM);
 sizeOfCell=10;
 H=round(H/sizeOfCell)*sizeOfCell;
 W=round(W/sizeOfCell)*sizeOfCell;
-dict_grid_size=H*W*4/(sizeOfCell*sizeOfCell);%Íø¸ñ×ÖµäµÄ³¤¶È
+dict_grid_size=H*W*4/(sizeOfCell*sizeOfCell);%ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä³ï¿½ï¿½ï¿½
 %backgroundIM=imresize(backgroundIM,H,W);
 imwrite(backgroundIM,'background.jpg');
 rawdatafile=['../result/exper' n_th '/']
@@ -22,12 +25,10 @@ savpath=[rawdatafile 'classqq' num2str(iter) ];
 file_name=['classqq' num2str(iter) '.txt'];
 S=load(file_name);%classqq_word38.txt%change iter***********
 %%
-%²»½øÐÐ×Öµä×ª»»£¬Ö±½Ó°ÑÏàÓ¦µÄ¹ì¼£´ò³öÀ´
-%Ã¿¸öµ¥´Ê¶ÔÓ¦µÄ¹ì¼£
-dict=cell(size(S,2),1);%Ã¿¸öµ¥´Ê¶ÔÓ¦tjc_denÖÐµÄÎ»ÖÃÒ²ÊÇ¶ÔÓ¦inds_sub_tjcÖÐµÄÎ»ÖÃ
-load('../3FeatureExpression/testsavepath_2400/inds_sub_tjcs.mat');
-load('../3FeatureExpression/testsavepath_2400/tjc_encoded.mat');
-load('../3FeatureExpression/testsavepath_2400/tjc_res.mat');
+%ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½×ªï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó°ï¿½ï¿½ï¿½Ó¦ï¿½Ä¹ì¼£ï¿½ï¿½ï¿½ï¿½ï¿½
+%Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½Ó¦ï¿½Ä¹ì¼£
+dict=cell(size(S,2),1);%Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½Ó¦tjc_denï¿½Ðµï¿½Î»ï¿½ï¿½Ò²ï¿½Ç¶ï¿½Ó¦inds_sub_tjcï¿½Ðµï¿½Î»ï¿½ï¿½
+
 for idx_doc=1:1:size(tjc_encoded,2)
     for idx_word=1:1:length(tjc_encoded{1,idx_doc})
         word=tjc_encoded{1,idx_doc}(idx_word);
@@ -54,7 +55,7 @@ end
 % hold off;
 
 %%
-%ÏÖÔÚÊÇÐèÒª°ÑÃ¿¸öµ¥´ÊÓ³Éäµ½Ò»¸öÇøÓò¿éÖÐÈ»ºóÏÔÊ¾³öÀ´
+%ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½äµ½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 % figure(2)
 % imshow(backgroundIM)
 % hold on
@@ -65,10 +66,10 @@ end
 % H=round(H/sizeOfCell)*sizeOfCell
 % W=round(W/sizeOfCell)*sizeOfCell
 % 
-% dict_grid_size=H*W*4/(sizeOfCell*sizeOfCell);%Íø¸ñ×ÖµäµÄ³¤¶È
+% dict_grid_size=H*W*4/(sizeOfCell*sizeOfCell);%ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä³ï¿½ï¿½ï¿½
 % %backgroundIM=imresize(backgroundIM,H,W);
 % classqq_t=zeros(1,dict_grid_size);
-% words = encode_tjc(x,H,W,sizeOfCell);%ÄÜµÃµ½Ä³Ò»ÌõÆ¬¶Î¹ì¼£ÔÚ·½¸ñÇøÓòµÄÓ³Éä
+% words = encode_tjc(x,H,W,sizeOfCell);%ï¿½ÜµÃµï¿½Ä³Ò»ï¿½ï¿½Æ¬ï¿½Î¹ì¼£ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½
 % for i=1:1:length(words)
 %     classqq_t(1,words(i))=classqq_t(1,words(i))+1;
 % end
@@ -76,32 +77,37 @@ end
 % imshow(curImg);
 % hold off
 %%
-%°ÑÃ¿¸ö¾ÛÀàµ¥´Ê¶ÔÓ¦µ½Íø¸ñ»®·ÖµÄµ¥´ÊÖÐÈ¥,ÓÃÒ»¸ö¾ØÕó±íÊ¾£¬¾ÛÀàµ¥´Ê1000¸ö£¬Íø¸ñ»®·ÖÓÉÍ¼Æ¬´óÐ¡¾ö¶¨36864
-P=zeros(dict_size,dict_grid_size);
-for word_i=1:1:dict_size
-    idx_dict=word_i;
-    if size(dict{idx_dict,1},1)==0
-        display('There are some empty clusters in this dictionary set');
-    end
-    for dict_i=1:1:size(dict{idx_dict,1},1)
-        idx_tjc=dict{idx_dict,1}(dict_i,1);
-        idx_sub=dict{idx_dict,1}(dict_i,2);%
-        idx_point=inds_sub_tjcs{idx_tjc,1}{1,idx_sub}(1,:);
-        sub_tjc=tjc_res{1,idx_tjc}(idx_point,:);%Ò»¸öÆ¬¶Î¹ì¼£µÄ×ø±ê
-        %plot(sub_tjc(:,1),sub_tjc(:,2),'b*');
-        words_grid=encode_tjc(sub_tjc,H,W,sizeOfCell);
-        for jj=1:1:length(words_grid)
-            %Í³¼ÆÃ¿¸ö×Ó¹ì¼£ÖÐ¶ÔÓ¦dict_gridÖÐµÄ´ÊÆµ
-            P(word_i,words_grid(jj))=P(word_i,words_grid(jj))+1;
+%ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½àµ¥ï¿½Ê¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ñ»®·ÖµÄµï¿½ï¿½ï¿½ï¿½ï¿½È¥,ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½àµ¥ï¿½ï¿½1000ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñ»®·ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½36864
+if exist(['./P' num2str(dict_size) '.mat'])
+	load(['./P' num2str(dict_size) '.mat']);
+else
+    P=zeros(dict_size,dict_grid_size);
+    for word_i=1:1:dict_size
+        idx_dict=word_i;
+        if size(dict{idx_dict,1},1)==0
+            display('There are some empty clusters in this dictionary set');
+        end
+        for dict_i=1:1:size(dict{idx_dict,1},1)
+            idx_tjc=dict{idx_dict,1}(dict_i,1);
+            idx_sub=dict{idx_dict,1}(dict_i,2);%
+            idx_point=inds_sub_tjcs{idx_tjc,1}{1,idx_sub}(1,:);
+            sub_tjc=tjc_res{1,idx_tjc}(idx_point,:);%Ò»ï¿½ï¿½Æ¬ï¿½Î¹ì¼£ï¿½ï¿½ï¿½ï¿½ï¿½
+            %plot(sub_tjc(:,1),sub_tjc(:,2),'b*');
+            words_grid=encode_tjc(sub_tjc,H,W,sizeOfCell);
+            for jj=1:1:length(words_grid)
+                %Í³ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Ó¹ì¼£ï¿½Ð¶ï¿½Ó¦dict_gridï¿½ÐµÄ´ï¿½Æµ
+                P(word_i,words_grid(jj))=P(word_i,words_grid(jj))+1;
+            end
+        end
+        %Ã¿ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¹ï¿½Ò»ï¿½ï¿½
+        if sum( P(word_i,:))>0
+            P(word_i,:)=P(word_i,:)./sum( P(word_i,:));
         end
     end
-    %Ã¿×öÍêÒ»¸öµ¥´ÊÒª½øÐÐÒ»´Î¹éÒ»»¯
-    if sum( P(word_i,:))>0
-        P(word_i,:)=P(word_i,:)./sum( P(word_i,:));
-    end
+    save(['./P' num2str(dict_size) '.mat'],'P');
 end
 %%
-%°ÑÒ»¸öÖ÷ÌâÏÔÊ¾³öÀ´
+%ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 topics=S*P;
 for i=1:size(topics,1)
     curImg=genOptTopicIm_color(topics(i,:),backgroundIM);

@@ -1,6 +1,6 @@
 function [ output_args ] = plot_dictionary( res_sub_tjc,trainss,res_dir )
-%PLOT_DICTIONARY ´Ë´¦ÏÔÊ¾ÓÐ¹Ø´Ëº¯ÊýµÄÕªÒª
-%   ÊäÈëÖØ²ÉÑùÖ®ºóµÄ×Ó¹ì¼£ÓëÏàÓ¦µÄÀà±ð£¬Êä³öÍ¼Ïñ
+%PLOT_DICTIONARY ï¿½Ë´ï¿½ï¿½ï¿½Ê¾ï¿½Ð¹Ø´Ëºï¿½ï¿½ï¿½ï¿½ÕªÒª
+%   ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Ó¹ì¼£ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 
 %res_dir = './temp_data/';
 T = size(res_sub_tjc,2)/2;
@@ -14,8 +14,8 @@ inds_vis = randperm(n, num_vis);
 res_sub_tjc = res_sub_tjc(inds_vis);
 trainss = trainss(inds_vis);
 trainss = trainss.';
-I = imread('background.jpg');
-scale = [0 720 0 480];
+I = imread('./background.jpg');
+scale = [0 size(I,2) 0 size(I,1)];
 hold on
 %parpool(4)
 for cc = 1:K

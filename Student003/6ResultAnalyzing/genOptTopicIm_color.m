@@ -50,8 +50,8 @@ bgim = im2double(bgim);
 sumI=zeros(round(size(bgim,1)/10)*10,round(size(bgim,2)/10)*10,3);
 for i=1:size(A,1)
     curA=A(i,:);
-    size(curA)
-    round(size(bgim,1)/10)*round(size(bgim,2)/10)*4
+    %size(curA)
+    %round(size(bgim,1)/10)*round(size(bgim,2)/10)*4
      B = reshape(curA, [round(size(bgim,1)/10) round(size(bgim,2)/10) 4]);
 %B = reshape(A, [24 35 4]);
 S = sum(B, 3);
@@ -69,4 +69,5 @@ I = imresize(I, [round(size(bgim,1)/10)*10 round(size(bgim,2)/10)*10]);
 %I = imresize(I, [240 350]);
 sumI=sumI+I;
 end
+bgim=imresize(bgim,[round(size(bgim,1)/10)*10 round(size(bgim,2)/10)*10]);
 im = 1*bgim + 1.2*sumI ;

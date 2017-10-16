@@ -1,14 +1,15 @@
-%Ä¿±ê£ºµ¥´ÊµÄÂë±¾µÄ¹¹½¨  
-%ÊäÈë£ºÔ­Ê¼Êý¾Ý
-%Êä³ö£º×Öµä£¬¼°¹ì¼£µÄµ¥´Ê±íÊ¾
-%´¦ÀíÈ«Êý¾Ý¼¯£¬µ¥´ÊÂë±¾³¤¶È1000
+%Ä¿ï¿½ê£ºï¿½ï¿½ï¿½Êµï¿½ï¿½ë±¾ï¿½Ä¹ï¿½ï¿½ï¿½  
+%ï¿½ï¿½ï¿½ë£ºÔ­Ê¼ï¿½ï¿½ï¿½
+%ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµä£¬ï¿½ï¿½ï¿½ì¼£ï¿½Äµï¿½ï¿½Ê±ï¿½Ê¾
+%ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Ý¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±¾ï¿½ï¿½ï¿½ï¿½1000
 %%
-%¶ÁÈëÔ­Ê¼Êý¾ÝÈ¥µôssÐÅÏ¢£¬±£Áô¹ì¼£µÄ×ø±êºÍÊ±¼ä
+%ï¿½ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½ï¿½È¥ï¿½ï¿½ssï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¼£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 close all ;clear all;clc;
 %%%%%%%%%%%%%
-%ÐèÒª¸ü¸ÄÊý¾ÝÔ´£¬²¢¸ü¸Ä¾ÛÀàÖÐÐÄ¸öÊý£¬¼´×ÖµäµÄ´óÐ¡
-originalfilename= 'D:\code\TEMP\Student003\data\data5000frames\Trks.mat';
-
+%ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä´ï¿½Ð¡
+originalfilename= '~/cvpr2018_code/Student003/data/data5000frames/Trks.mat';
+backgroundIM=imread('~/cvpr2018_code/Student003/data/data5000frames/background.jpg');
+imwrite(backgroundIM,'background.jpg');
 %%%%%%%%%%%%%%%%%%%%%
 load(originalfilename)
 trks=Trks;
@@ -30,7 +31,7 @@ save ([temp_dir 'time_vector.mat'],'time_vector');%'./temp_data/time_vector.mat'
 %     tjc_xy{i}=tjc_xyt{i}(:,1:2);
 % end
 % save([temp_dir 'tjc_xy.mat'],'tjc_xy');% './temp_data/tjc_xy.mat' tjc_xy
-%°´Ê±¼äÅÅÐò
+%ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % close all ;clear all;clc
 % temp_dir='./testsavepath/';
 load ([temp_dir 'time_vector.mat']);%'./temp_data/time_vector.mat'
@@ -58,7 +59,7 @@ save ([temp_dir 'tjc_xyt.mat'], 'tjc_xyt');
 save([temp_dir 'index_new.mat'],'index_new');% './temp_data/index_new.mat' index_new
 save([temp_dir 'trks_time_based.mat'],'trks_time_based');%'./temp_data/trks_time_based.mat' trks_time_based
 %%
-%¶ÔÃ¿Ìõ¹ì¼£½øÐÐ½µÔë´¦Àí,ÕâÀïÓöµ½Ò»¸öÐ¡²¨½µÔëÓÃµÄÊÇÏÖ³ÉµÄº¯Êý£¬¾ßÌåÏ¸½ÚÐèÒªÑ§Ï°
+%ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ì¼£ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ë´¦ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ö³ÉµÄºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ÒªÑ§Ï°
 % close all ;clear all;clc
 % temp_dir='./testsavepath/';
 load ([temp_dir 'tjc_xy.mat']);%'./temp_data/tjc_xy.mat'
@@ -66,7 +67,7 @@ do_plot=0;
 [ tjc_den ] = denoise_of_tjcxy( tjc_xy,do_plot);
 save([temp_dir 'tjc_den.mat'],'tjc_den');% './temp_data/tjc_den.mat' tjc_den
 %%
-%¶Ô½µÔëÖ®ºóµÄ¹ì¼£ÖØÐÂ²ÉÑù
+%ï¿½Ô½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ä¹ì¼£ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½
 % close all ;clear all;clc
 % temp_dir='./testsavepath/';
 load([temp_dir 'tjc_den.mat']);% './temp_data/tjc_den.mat'
@@ -74,7 +75,7 @@ load([temp_dir 'tjc_den.mat']);% './temp_data/tjc_den.mat'
 [ tjc_res ,len_tjc ] = tjc_resample( tjc_den,1,0,1 ) ;  
 save([temp_dir 'tjc_res.mat'],'tjc_res');% './temp_data/tjc_res.mat' tjc_res len_tjc
 %%
-%Ã¿Ìõ¹ì¼£·Ö³ÉÈô¸ÉÐ¡¶Î
+%Ã¿ï¿½ï¿½ï¿½ì¼£ï¿½Ö³ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½
 % close all ;clear all;clc
 % temp_dir='./testsavepath/';
 load([temp_dir 'tjc_res.mat']);% './temp_data/tjc_res.mat' 
@@ -84,18 +85,17 @@ do_plot=0;
 save([temp_dir 'inds_sub_tjcs.mat'],'inds_sub_tjcs');% './temp_data/inds_sub_tjcs.mat' inds_sub_tjcs
 save([temp_dir 'num_sub_tjc.mat'],'num_sub_tjc');%'./temp_data/num_sub_tjc.mat' num_sub_tjc
 %%
-%¶ÔÐ¡¶Î½øÐÐÖØ²ÉÑù
+%ï¿½ï¿½Ð¡ï¿½Î½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½
 % close all;clear all;clc
 % temp_dir='./testsavepath/';
 load([temp_dir 'inds_sub_tjcs.mat']);%'./temp_data/inds_sub_tjcs.mat'
-load([temp_dir 'num_sub_tjc.mat']);% './temp_data/num_sub_tjc.ma
-t'
+load([temp_dir 'num_sub_tjc.mat']);% './temp_data/num_sub_tjc.mat'
 load ([temp_dir 'tjc_res.mat']);%./temp_data/tjc_res.mat' 
 [sub_tjc_resampled] = sub_tjc_res( inds_sub_tjcs,tjc_res );
 save([temp_dir 'sub_tjc_resampled.mat'],'sub_tjc_resampled');%'./temp_data/sub_tjc_resampled.mat' sub_tjc_resampled
 
 %%
-%²úÉúÓÃÓÚ¾ÛÀàµÄÌØÕ÷
+%ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % close all;clear all;clc
 % temp_dir='./testsavepath/';
 load([temp_dir 'sub_tjc_resampled.mat']);% './temp_data/sub_tjc_resampled.mat'
@@ -103,16 +103,16 @@ n_dim=4;
 [ sub_tjc_features ] = generate_feature( sub_tjc_resampled,n_dim );
 save([temp_dir 'sub_tjc_features.mat'],'sub_tjc_features');% './temp_data/sub_tjc_features.mat' sub_tjc_features
 %%
-%Ê¹ÓÃkmeans ¾ÛÀàµÃµ½´Êµä
+%Ê¹ï¿½ï¿½kmeans ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Êµï¿½
 % close all;clear all;clc
 % temp_dir='./testsavepath/';
 load([temp_dir 'sub_tjc_features.mat']);% './temp_data/sub_tjc_features.mat'
-k=500;%%%´Êµä³¤¶È,¾ÛÀà ¸öÊý
+k=300;%%%ï¿½Êµä³¤ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 [IDX,C] = kmeans(sub_tjc_features,k,'start','uniform','MaxIter',2000);
 save([temp_dir 'IDX.mat'],'IDX');%'./temp_data/IDX.mat' IDX
 save([temp_dir 'C.mat'],'C');% './temp_data/C.mat' C
 %%
-%²¢½«¹ì¼£±íÊ¾Îªµ¥´Ê
+%ï¿½ï¿½ï¿½ï¿½ï¿½ì¼£ï¿½ï¿½Ê¾Îªï¿½ï¿½ï¿½ï¿½
 % close all;clear all;clc
 % temp_dir='./testsavepath/';
 load([temp_dir 'IDX.mat']);% './temp_data/IDX.mat'
@@ -128,15 +128,16 @@ for ii=1:length(num_sub_tjc)
 end
 save([temp_dir 'tjc_encoded.mat'],'tjc_encoded');%'./temp_data/tjc_encoded.mat' tjc_encoded
 %%
-%°Ñ´Êµä»æÖÆÔÚÍ¼ÖÐ
+%ï¿½Ñ´Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 % close all;clear all;clc
-% temp_dir='./testsavepath/';
-% load([temp_dir 'sub_tjc_resampled.mat']);% './temp_data/sub_tjc_resampled.mat'
-% load([temp_dir 'tjc_encoded.mat']);% './temp_data/tjc_encoded.mat'
-% plot_dictionary( sub_tjc_resampled,tjc_encoded ,temp_dir);
+% %temp_dir='./testsavepath/';
+% temp_dir='./testsavepath_5000/';
+load([temp_dir 'sub_tjc_resampled.mat']);% './temp_data/sub_tjc_resampled.mat'
+load([temp_dir 'tjc_encoded.mat']);% './temp_data/tjc_encoded.mat'
+plot_dictionary( sub_tjc_resampled,tjc_encoded ,temp_dir);
 %%
-%Ã¿Ìõ×Ó¹ì¼£ÓÃRFTÖÐµÄÊÓ¾õµ¥´Ê±íÊ¾£¬µÃµ½vis_word·½±ãÓÃÀ´¿ÉÊÓ»¯
-%Ê¹ÓÃµÄÊÇtjc_res
-K=500;
-convert_to_vis_words(temp_dir);%µÃµ½vis_words
-vhddcrp2vrft(temp_dir,K);%µÃµ½P_1000£¬Ê¹ÓÃÕâ¸ö¾ØÕóÄÜ°Ñ¾ÛÀàµÄ½á¹ûclassqqÖ±½Ó×ª»»Îª¿ÉÊÓ»¯µÄÍ¼Æ¬
+%Ã¿ï¿½ï¿½ï¿½Ó¹ì¼£ï¿½ï¿½RFTï¿½Ðµï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ê¾ï¿½ï¿½ï¿½Ãµï¿½vis_wordï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó»ï¿½
+%Ê¹ï¿½Ãµï¿½ï¿½ï¿½tjc_res
+K=300;
+convert_to_vis_words(temp_dir);%ï¿½Ãµï¿½vis_words
+vhddcrp2vrft(temp_dir,K);%ï¿½Ãµï¿½P_1000ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü°Ñ¾ï¿½ï¿½ï¿½Ä½ï¿½ï¿½classqqÖ±ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½Í¼Æ¬

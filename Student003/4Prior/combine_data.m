@@ -1,7 +1,7 @@
-%¶ÁÈ¡Êý¾Ý£¬²¢ºÏ²¢,°üÀ¨ÆðÖ¹µã£¬µ¥´Ê£¬ÏÈÑé£¬»¹ÓÐÒ»¸ö³õÊ¼ÐÅÏ¢£¨£¿£©
+%ï¿½ï¿½È¡ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½Ï²ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ã£¬ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 close all;clear all;clc;
-load ('../FeatureExpression/testsavepath_5000/tjc_encoded.mat')
+load ('../3FeatureExpression/testsavepath_5000/tjc_encoded.mat')
 %load ('./testsavepath/source_sink.mat')
 load('./testsavepath_block_5000/prior.mat')
 trainss=tjc_encoded';
-save ('D:\code\TEMP\Student003\data\data5000frames\test.mat','cand_links','log_priors','trainss')
+save ('~/cvpr2018_code/Student003/data/data5000frames/test.mat','cand_links','log_priors','trainss')
