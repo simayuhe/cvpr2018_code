@@ -4,9 +4,9 @@
 %2.由于我们用的字典是片段轨迹的聚类，而我们最终希望得到的是一个区域信息，
 %  所以将片段轨迹的类投影到相应的方格区域中进行显示。
 close all;clear all;clc
-n_th='2401';%************
-iter=66;
-dict_size=1000;
+n_th='106';%************
+iter=1000;
+dict_size=500;
 
 backgroundIM=imread('D:\code\TEMP\GVEII\data\data2400frames\background.jpeg');
 [H,W,~]=size(backgroundIM);
